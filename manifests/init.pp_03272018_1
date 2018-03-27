@@ -43,10 +43,20 @@
 # Copyright 2018 Your name here, unless otherwise noted.
 #
 class web {
-
-class { 'web::install': }
-class { 'web::webdeploy': }
-class { 'web::service': }
-
-
+	package { 'web_software': 
+	ensure => present,
+	name => 'httpd',
+	}
+file { 'deploy webpage':
+	ensure => file,
+	path => '/var/www/html/index.html',
+	source => 'puppet:///modules/web/index.html',
+	owner => 'apache',
+	mode => '0644',
+	}
+service { 'web_service':
+	ensure => running,
+	name => 'httpd',
+	enable => true,
+	}
 }
