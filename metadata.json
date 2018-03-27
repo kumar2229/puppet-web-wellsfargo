@@ -1,0 +1,18 @@
+{
+  "name": "kumar-web",
+  "version": "0.1.0",
+  "author": "sundar kumar <sundarg.kumar@gmail.cm>",
+  "summary": "This is test module for kumar-web deployment",
+  "license": "Apache-2.0",
+  "source": "https://github.com/kumar2229/puppet-web-wellsfargo",
+  "project_page": "https://github.com/kumar2229/puppet-web-wellsfargo",
+  "issues_url": "https://github.com/kumar2229/puppet-web-wellsfargo/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">= 1.0.0"
+    }
+  ],
+  "data_provider": null
+}
+
